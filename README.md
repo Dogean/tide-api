@@ -138,9 +138,7 @@ public class ExamplePlugin extends JavaPlugin {
                         String message = String.join(" ", ctx.getArgs());
                         getServer().broadcastMessage(message);
                     })
-            ).register(commandManager);
-
-        // Register commands
+            ).register(commandManager); // Register commands
     }
 }
 ```
