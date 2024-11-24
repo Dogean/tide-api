@@ -1,5 +1,6 @@
-package me.acp.tide.builder;
+package me.acp.tide;
 
+import me.acp.tide.builder.AbstractCommandBuilder;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

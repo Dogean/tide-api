@@ -28,7 +28,6 @@ The project is organized into the following packages:
 ### `core` - Core Implementation Classes
 - `AbstractCommand` - Base command implementation
 - `CommandContext` - Command execution context
-- `CommandManager` - Main command management
 
 ### `util` - Utility Classes
 - `ArgumentParser` - Argument parsing utilities
@@ -38,6 +37,9 @@ The project is organized into the following packages:
 - `@Subcommand` - Define subcommands
 - `@TabCompleter` - Define tab completers
 - `@Arg` - Automatic parameter injection
+
+#### `CommandManager` - Main command management
+
 
 ## Usage
 

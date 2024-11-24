@@ -1,5 +1,6 @@
 package me.acp.tide.builder;
 
+import me.acp.tide.CommandBuilder;
 import me.acp.tide.api.ICommand;
 import me.acp.tide.api.ICommandBuilder;
 import me.acp.tide.core.AbstractCommand;

@@ -5,7 +5,7 @@ import me.acp.tide.annotation.Command;
 import me.acp.tide.annotation.Subcommand;
 import me.acp.tide.annotation.TabCompleter;
 import me.acp.tide.api.ICommand;
-import me.acp.tide.builder.CommandBuilder;
+import me.acp.tide.CommandBuilder;
 import me.acp.tide.util.ArgumentParser;
 
 import org.bukkit.command.CommandMap;
