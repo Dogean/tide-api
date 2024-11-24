@@ -41,11 +41,7 @@ The project is organized into the following packages:
 #### `CommandManager` - Main command management
 
 
-## Usage
-
-You can use this API in two ways: using annotations or using the builder pattern.
-
-### Importing
+## Importing
 
 ```xml 
 <!-- Maven Example -->
@@ -80,6 +76,8 @@ dependencies {
 }
 ```
 
+## Usage
+You can use this API in two ways: using annotations or using the builder pattern.
 
 ### Annotation-based Commands
 
