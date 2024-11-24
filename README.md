@@ -45,6 +45,42 @@ The project is organized into the following packages:
 
 You can use this API in two ways: using annotations or using the builder pattern.
 
+### Importing
+
+```xml 
+<!-- Maven Example -->
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.Dogean</groupId>
+        <artifactId>tide-api</artifactId>
+        <version>[LATEST_BUILD]</version>
+    </dependency>
+</dependencies>
+
+```
+
+```groovy
+// Gradle example
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencies {
+    implementation 'com.github.Dogean:tide-api:[LATEST_BUILD]'
+}
+```
+
+
 ### Annotation-based Commands
 
 ```java
