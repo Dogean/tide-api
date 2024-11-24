@@ -6,6 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import me.acp.tide.api.ICommand;
 import me.acp.tide.core.CommandContext;
+import me.acp.tide.core.CommandManager;
 
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
@@ -140,5 +141,19 @@ public class CommandBuilder extends AbstractCommandBuilder {
     @Override
     public CommandBuilder subcommand(@NotNull ICommand subcommand) {
         return (CommandBuilder) super.subcommand(subcommand);
+    }
+
+    /**
+     * {@inheritDoc}
+     * Registers this command with the given CommandManager.
+     * This is the final step in the builder chain that actually registers the command.
+     *
+     * @param commandManager The CommandManager to register with
+     * @return The built command instance
+     * @throws IllegalStateException if registration fails
+     */
+    @Override
+    public ICommand register(@NotNull CommandManager commandManager) {
+        return super.register(commandManager);
     }
 }

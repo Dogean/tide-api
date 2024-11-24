@@ -1,6 +1,7 @@
 package me.acp.tide.api;
 
 import me.acp.tide.core.CommandContext;
+import me.acp.tide.core.CommandManager;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -68,4 +69,14 @@ public interface ICommandBuilder extends ICommand {
      * @return This builder instance
      */
     ICommandBuilder subcommand(@NotNull ICommand subcommand);
+
+    /**
+     * Registers this command with the given CommandManager.
+     * This is the final step in the builder chain that actually registers the command.
+     *
+     * @param commandManager The CommandManager to register with
+     * @return The built command instance
+     * @throws IllegalStateException if registration fails
+     */
+    ICommand register(@NotNull CommandManager commandManager);
 }

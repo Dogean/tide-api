@@ -4,6 +4,7 @@ import me.acp.tide.api.ICommand;
 import me.acp.tide.api.ICommandBuilder;
 import me.acp.tide.core.AbstractCommand;
 import me.acp.tide.core.CommandContext;
+import me.acp.tide.core.CommandManager;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -140,6 +141,21 @@ public abstract class AbstractCommandBuilder extends AbstractCommand implements 
     @Override
     public ICommandBuilder subcommand(@NotNull ICommand subcommand) {
         this.subcommands.add(subcommand);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     * Registers this command with the given CommandManager.
+     * This is the final step in the builder chain that actually registers the command.
+     *
+     * @param commandManager The CommandManager to register with
+     * @return The built command instance
+     * @throws IllegalStateException if registration fails
+     */
+    @Override
+    public ICommand register(@NotNull CommandManager commandManager) {
+        commandManager.register(this);
         return this;
     }
 }

@@ -110,7 +110,8 @@ public class ExamplePlugin extends JavaPlugin {
                 } else {
                     ctx.getSender().sendMessage("Hello, Console!");
                 }
-            });
+            }).register(commandManager);
+        
 
         // Create a command with subcommands
         CommandBuilder complexCommand = CommandBuilder.create("admin")
@@ -137,11 +138,9 @@ public class ExamplePlugin extends JavaPlugin {
                         String message = String.join(" ", ctx.getArgs());
                         getServer().broadcastMessage(message);
                     })
-            );
+            ).register(commandManager);
 
         // Register commands
-        commandManager.register(simpleCommand);
-        commandManager.register(complexCommand);
     }
 }
 ```
@@ -178,6 +177,9 @@ public class ExamplePlugin extends JavaPlugin {
 - Subcommand routing
 - Tab completion support
 - Support for both annotation and builder patterns
+
+## Docs
+More documentation is found in [docs](docs).
 
 ## Contributing
 
