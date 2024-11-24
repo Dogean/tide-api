@@ -24,6 +24,7 @@ import java.util.*;
  *
  * <p>
  * Example usage with annotations:
+ * <p>
  * ```java
  * public class ExamplePlugin extends JavaPlugin {
  *     private CommandManager commandManager;

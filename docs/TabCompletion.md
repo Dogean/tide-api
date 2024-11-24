@@ -59,7 +59,7 @@ CommandBuilder gamemodeCommand = CommandBuilder.create("gamemode")
     })
     .executor(context -> {
         // Command implementation
-    });
+    }).register(commandManager);
 ```
 
 ### Dynamic Tab Completion
@@ -85,7 +85,7 @@ CommandBuilder kitCommand = CommandBuilder.create("kit")
     })
     .executor(context -> {
         // Command implementation
-    });
+    }).register(commandManager);
 ```
 
 ### Subcommand Tab Completion
@@ -117,7 +117,7 @@ CommandBuilder adminCommand = CommandBuilder.create("admin")
                 }
                 return Collections.emptyList();
             })
-    );
+    ).register(commandManager);
 ```
 
 ## Best Practices
